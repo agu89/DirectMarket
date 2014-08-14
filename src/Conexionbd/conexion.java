@@ -27,8 +27,10 @@ public class conexion {
     public void conectarBase(){
         try {
             Class.forName("org.hsqldb.jdbcDriver");
-            conexion=DriverManager.getConnection("jdbc:hsqldb:hsql:C:\\base");
+            conexion=DriverManager.getConnection("jdbc:hsqldb:hsql://c:/base/directmarket","root","root");
             sentencia=conexion.createStatement();
+           
+           
             
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(conexion.class.getName()).log(Level.SEVERE, null, ex);

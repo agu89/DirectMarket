@@ -19,7 +19,7 @@ public class agregar {
      bd = new Conexionbd.conexion();
      bd.conectarBase();
          try {
-             bd.sentencia.executeUpdate("INSERT INTO 'clientes'('nick','nombre','apellido')VALUES('"+cli.getNick()+"','"+cli.getNombre()+"','"+cli.getNick()+"')");
+             bd.sentencia.executeQuery("INSERT INTO `PUBLIC.CLIENTES`(`nick`, `nombre`, `apellido`)VALUES('"+cli.getNick()+"','"+cli.getNombre()+"','"+cli.getNick()+"')");
          } catch (SQLException ex) {
              Logger.getLogger(agregar.class.getName()).log(Level.SEVERE, null, ex);
          }

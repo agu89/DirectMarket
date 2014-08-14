@@ -5,6 +5,7 @@
  */
 
 package Logica;
+import Conexionbd.agregar;
 
 /**
  *
@@ -43,6 +44,13 @@ public class cliente extends Usuario{
    public void setApellido(String ap){
         this.apellido = ap;
    }
-   
+
+   public void agregarCli(cliente cli){
+       agregar ag;
+       ag = new agregar();
+       ag.agregarcliente(cli);
+       
+       
+   }
    
 }
