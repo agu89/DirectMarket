@@ -7,6 +7,7 @@
 package Vistas;
 
 import Conexionbd.agregar;
+import Logica.ControladorUsuario;
 import Logica.cliente;
 
 /**
@@ -129,11 +130,10 @@ public class AgregarCliente extends javax.swing.JFrame {
         
     }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        cliente cli;
-        cli = new cliente();
-        cli.nick = nick;
-        cli.nombre = nom;
-        cli.apellido = ap;
+        ControladorUsuario cu = new ControladorUsuario();
+        
+        //crear date con fecha que elige en jcalendar?
+    // cu.RegistrarUsuario(nick, nom, ap, ap, nick, ap);
 
         
     }//GEN-LAST:event_jButton1ActionPerformed

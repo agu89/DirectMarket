@@ -8,14 +8,10 @@ package Logica;
 
 /**
  *
- * @author Agustin
+ * @author Guilleeu
  */
-abstract class Usuario {
-     public String nick;
-     public String nombre;
-     public String apellido;
-     public String email;
-  //   public date fnac;
-     public String imagen;
-     
- }
+public class ListaClientes {
+    public cliente nodo;
+    
+   
+}

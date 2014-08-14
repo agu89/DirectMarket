@@ -16,9 +16,23 @@ public class cliente extends Usuario{
        nick = null;
        nombre = null;
        apellido = null;
+       email = null;
+      // fnac = null;
+       imagen = null;
       
    }
    
+   public void setDatos(String nick, String nombre, String apellido, String email, /*date fnac,*/ String Imagen){
+   this.apellido = apellido;
+   this.email = email;
+   this.imagen = Imagen;
+   this.nick = nick;
+   this.nombre = nombre;
+  // this.fnac = null;
+   
+   
+   
+   }
    public cliente(String ni,String nom, String ap){
         
        this.nick = ni;
