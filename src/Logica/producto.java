@@ -52,6 +52,7 @@ class producto {
     public int getNumRef(){
        return NumRef;
           }
+    
     public String getDescripcion(){
        return Descripcion;
           }
