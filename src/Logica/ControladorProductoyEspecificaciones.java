@@ -21,7 +21,7 @@ public class ControladorProductoyEspecificaciones {
     public void ControladorProductoyEspecificaciones(){
         
     List<producto> ListaProductos = new LinkedList<producto>();
-    List<hoja> ListaHoja = new LinkedList<hoja>();
+    List<Hoja> ListaHoja = new LinkedList<hoja>();
     List<compuesta> ListaCompuesta = new LinkedList<compuesta> ();
     
     }
