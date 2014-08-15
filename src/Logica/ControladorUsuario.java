@@ -67,7 +67,26 @@ public class ControladorUsuario {
         return DataListaClientes;
             // no se si esta devolviendo bien la lista
     }
-    SeleccionarCliente(string)
+    
+    public cliente SeleccionarCliente(String nick){
+    
+    Iterator it = ListaClientes.iterator();
+    
+    while (it.hasNext()){
+        if (it instanceof cliente){
+            cliente c = new cliente();
+            c = (cliente)it;
+            if (c.getNick()== nick)
+                return c;
+            
+        
+        }
+        it.next();
+    
+    }
+    return null;
+    }
+    
     ListarProveedores()
     SeleccionarProveedor(String)
     ObtenerOrdenesdeCompra()
