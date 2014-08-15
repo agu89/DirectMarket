@@ -49,7 +49,7 @@ public class ControladorUsuario {
    
     }
     
-    public DataCliente ListarClientes(){
+    public List ListarClientes(){
     
     List<DataCliente> DataListaClientes = new LinkedList<DataCliente>();
     DataCliente dc = new DataCliente();
@@ -64,7 +64,8 @@ public class ControladorUsuario {
             }
             it.next();
          }
-            
+        return DataListaClientes;
+            // no se si esta devolviendo bien la lista
     }
     SeleccionarCliente(string)
     ListarProveedores()
