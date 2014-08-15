@@ -66,5 +66,10 @@ public class cliente extends Usuario{
        
        
    }
+   public DataCliente getData(){
    
+   DataCliente dc = new DataCliente();
+   dc.setDatos(nick, nombre, apellido, email, imagen);
+   return dc;
+   }
 }

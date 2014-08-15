@@ -12,5 +12,30 @@ package Logica;
  */
 class DataCliente {
     
+    private String nick;
+    private String nombre;
+    private String apellido;
+    private String email;
+ // private date fnac;
+    private String imagen;
+    
+    
+    public void DataCliente(){
+    nick = null;
+    nombre = null;
+    apellido = null;
+    email = null;
+    //fnac = null;
+    imagen = null;
+    }
+    public void setDatos(String nick, String nombre, String apellido, String email, /*date fnac*/ String imagen){
+    
+    this.apellido = apellido;
+    this.email = email;
+    this.imagen = imagen;
+    this.nick = nick;
+    this.nombre = nombre;
+    
+    }
     
 }

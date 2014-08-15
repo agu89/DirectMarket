@@ -53,8 +53,17 @@ public class ControladorUsuario {
     
     List<DataCliente> DataListaClientes = new LinkedList<DataCliente>();
     DataCliente dc = new DataCliente();
-    Iterator it = ListaClientes.iterator();
-    while(it.hasNext())
+        Iterator it = ListaClientes.iterator();
+        while(it.hasNext()){
+            if ( it instanceof cliente){
+            cliente cc  = new cliente();
+            cc = (cliente) it;
+            dc = cc.getData();
+            DataListaClientes.add(dc);
+            
+            }
+            it.next();
+         }
             
     }
     SeleccionarCliente(string)
