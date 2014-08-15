@@ -11,12 +11,12 @@ package Logica;
  * @author Agustin
  */
 abstract class Usuario {
-     private String nick;
-     private String nombre;
-     private String apellido;
-     private String email;
+     String nick;
+     String nombre;
+     String apellido;
+     String email;
   //   private date fnac;
-     private String imagen;
+     String imagen;
      
      public void Usuario(){
      

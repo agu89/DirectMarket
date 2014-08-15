@@ -6,6 +6,7 @@
 
 package Logica;
 import java.util.*; 
+import Conexionbd.*;
 /**
  *
  * @author Guilleeu
@@ -13,14 +14,14 @@ import java.util.*;
 public class ControladorUsuario {
     
     
-    public List ListaClientes;
-    public List ListaProveedores;
+    private List ListaClientes;
+    private List ListaProveedores;
     
     
     public void ControladorUsuario(){
         
-    List<cliente> ListaClientes = new LinkedList<cliente>();
-    List<Proveedor> ListaProveedores = new LinkedList<Proveedor>();
+    List<cliente> ListaClientes = new LinkedList();
+    List<Proveedor> ListaProveedores = new LinkedList();
     
     
     // sintaxis List<Persona> listalinked = new LinkedList<Persona>();
@@ -32,6 +33,8 @@ public class ControladorUsuario {
         cliente c = new cliente();
         c.setDatos(nick, nombre, apellido, email, Imagen);
         ListaClientes.add(c);
+        agregar ag = new agregar();
+        ag.agregarcliente(c);
        
     }
     
@@ -43,53 +46,96 @@ public class ControladorUsuario {
     Proveedor p = new Proveedor();
     p.setdatos(nick, nombre, apellido, email, Imagen, nombreComp,linkPag);
     ListaProveedores.add(p);
-    
+    agregar ag = new agregar();
+    ag.agregarproveedor(p);
     }
+    
     public void CargarFoto(){
    
     }
     
-    public List ListarClientes(){
-    
-    List<DataCliente> DataListaClientes = new LinkedList<DataCliente>();
+    public List<DataCliente> ListarClientes(){
+        
+    getLista gl = new getLista();
+    ListaClientes = gl.getListaCliente();
+    List<DataCliente> DataListaClientes = new LinkedList();
     DataCliente dc = new DataCliente();
         Iterator it = ListaClientes.iterator();
         while(it.hasNext()){
             if ( it instanceof cliente){
-            cliente cc  = new cliente();
-            cc = (cliente) it;
-            dc = cc.getData();
-            DataListaClientes.add(dc);
+                cliente cc  = new cliente();
+                cc = (cliente) it;
+                dc = cc.getData();
+                DataListaClientes.add(dc);
             
             }
             it.next();
          }
         return DataListaClientes;
-            // no se si esta devolviendo bien la lista
+            // no se si esta devolviendo bien la lista  
     }
     
     public cliente SeleccionarCliente(String nick){
     
-    Iterator it = ListaClientes.iterator();
+        getLista gl = new getLista();
+        ListaClientes = gl.getListaCliente();
+        Iterator it = ListaClientes.iterator();
+
+        while (it.hasNext()){
+            if (it instanceof cliente){
+                cliente c = new cliente();
+                c = (cliente)it;
+                if (c.getNick()== nick)
+                    return c;
+
+            }
+            it.next();
+
+        }
+        return null;
+    }
     
-    while (it.hasNext()){
-        if (it instanceof cliente){
-            cliente c = new cliente();
-            c = (cliente)it;
-            if (c.getNick()== nick)
-                return c;
+    public List<DataProveedor> ListarProveedores(){
+        
+        List<DataProveedor> dataListaProveedores = new LinkedList();
+        getLista gl = new getLista();
+        ListaProveedores = gl.getListaProveedor();
+        
+        Iterator it = ListaProveedores.iterator();
+        DataProveedor dp = new DataProveedor();
+        while(it.hasNext()){
+            if ( it instanceof Proveedor){
+                Proveedor p = new Proveedor();
+                p = (Proveedor) it;
+                dp = p.getData();
+                dataListaProveedores.add(dp);
             
+            }
+            it.next();
         
         }
-        it.next();
-    
-    }
-    return null;
+      
+    return dataListaProveedores;
     }
     
-    ListarProveedores()
-    SeleccionarProveedor(String)
-    ObtenerOrdenesdeCompra()
-    SeleccionarOrdenCompra(OrdenCompra)
+    
+    public DataProveedor SeleccionarProveedor(String nick){
+        
+        getLista gl = new getLista();
+        ListaProveedores = gl.getListaProveedor();
+        
+        
+    
+    
+    }
+    public List ObtenerOrdenesdeCompra(){
+    
+    
+    }
+    public dataOrden SeleccionarOrdenCompra(OrdenCompra oc){
+    
+    
+    
+    }
     
 }
