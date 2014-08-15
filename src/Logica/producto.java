@@ -51,8 +51,7 @@ class producto {
           }
     public int getNumRef(){
        return NumRef;
-          }
-    
+          } 
     public String getDescripcion(){
        return Descripcion;
           }
@@ -65,4 +64,22 @@ class producto {
     public String getImagen(){
        return Imagen;
           }
+    public void setNombre(String nom){
+       this.Nombre = nom;
+            }
+    public void setNumRef(int numRef){
+       this.NumRef = numRef;
+            }
+    public void setDescripcion(String desc){
+       this.Descripcion = desc;
+            }
+    public void setListaEsp(ListaEspecificaciones lisEsp){
+       this.ListaEsp= lisEsp;
+            }
+    public void setPrecio(Money prec){
+       this.Precio = prec;
+            }
+    public void setImagen(String imag){
+       this.Imagen = imag;
+            }
 }
