@@ -82,4 +82,19 @@ class producto {
     public void setImagen(String imag){
        this.Imagen = imag;
             }
+    
+      public void agregarProd(producto pro){
+       agregar ag;
+       ag = new agregar();
+       ag.agregarProducto(pro);
+       
+       
+   }
+    
+    public DataProducto getDataProd(){
+   
+   DataProducto dpr = new DataProducto();
+   dpr.setDataProd(Nombre, NumRef, Descripcion,/* ListaEsp , Money precio, */ Imagen);
+   return dpr;
+   }
 }
