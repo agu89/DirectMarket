@@ -18,4 +18,16 @@ abstract class Usuario {
   //   public date fnac;
      public String imagen;
      
+     public void Usuario(){
+     
+     String nick = null;
+     String nombre = null;
+     String apellido = null;
+     String email = null;
+     //date fnac = new date();
+     String imagen = null;
+     
+     }
+     
+     
  }

@@ -5,12 +5,12 @@
  */
 
 package Logica;
-
+import java.util.*;
 /**
  *
  * @author Guilleeu
  */
-public class ListaClientes {
+public class ListaClientes extends List{
     public cliente nodo;
     
    

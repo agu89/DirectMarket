@@ -39,14 +39,17 @@ public class Proveedor extends Usuario{
        nick = null;
        nombre = null;
        apellido = null;
-      
+      nombreCompañia = null;
+      linkPagina = null;
    }
    
-   public Proveedor(String ni,String nom, String ap){
+   public Proveedor(String ni,String nom, String ap, String nc, String lp){
         
        this.nick = ni;
        this.nombre = nom;
        this.apellido = ap;
+       this.linkPagina = lp;
+       this.nombreCompañia = nc;
      
    }
    public String getNick(){
@@ -68,4 +71,13 @@ public class Proveedor extends Usuario{
         this.apellido = ap;
    }
     
-}
+   public void setdatos(String nick, String nombre, String apellido, String email, /*date fnac,*/ String Imagen, String nc, String lp){
+
+   this.apellido = apellido;
+   this.email = email;
+   this.imagen = imagen;
+   this.linkPagina = lp;
+   this.nick = nick;
+   this.nombre = nombre;
+   this.nombreCompañia = nc;
+   }
