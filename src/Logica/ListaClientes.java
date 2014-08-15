@@ -10,7 +10,7 @@ import java.util.*;
  *
  * @author Guilleeu
  */
-public class ListaClientes extends List{
+public abstract class ListaClientes implements List{
     public cliente nodo;
     
    

@@ -10,10 +10,11 @@ package Logica;
  *
  * @author Usuario
  */
-public class ControladorProductoyCategoria {
+public class ControladorProductoyEspecificaciones {
     public ListaProductos ListaProductos;
     public ListaHojas ListaHojas;
     public ListaCompuesta ListaCompuesta;
+
     
     public void RegistrarProducto(String Nombre, int NumRef, String Descripcion, ListaEspecificaciones ListaEsp, Money precio, String Imagen){
          producto p = new producto();
@@ -22,5 +23,11 @@ public class ControladorProductoyCategoria {
             AltaEspecificaciones(ListaString)
             IngresarPadre(string)
             ListarEspecificaciones()*/
+    public void ListarEspecificaciones(int ref){
             
+        
+        
+    
+    
+    };    
 }

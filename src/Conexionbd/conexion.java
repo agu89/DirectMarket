@@ -27,7 +27,7 @@ public class conexion {
     public void conectarBase(){
         try {
             Class.forName("org.hsqldb.jdbcDriver");
-            conexion=DriverManager.getConnection("jdbc:hsqldb:hsql://c:/base/directmarket","root","root");
+            conexion=DriverManager.getConnection("jdbc:hsqldb:hsql://localhost/directmarket", "sa", "");
             sentencia=conexion.createStatement();
            
            

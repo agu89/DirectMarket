@@ -19,8 +19,10 @@ public class agregar {
      bd = new Conexionbd.conexion();
      bd.conectarBase();
          try {
-             bd.sentencia.executeQuery("INSERT INTO `PUBLIC.CLIENTES`(`nick`, `nombre`, `apellido`)VALUES('"+cli.getNick()+"','"+cli.getNombre()+"','"+cli.getNick()+"')");
+             
+             bd.sentencia.executeQuery("INSERT INTO CLIENTES(nick, nombre, apellido)VALUES('"+cli.getNick()+"','"+cli.getNombre()+"','"+cli.getApellido()+"')");
          } catch (SQLException ex) {
+             System.out.println("la puta madre");
              Logger.getLogger(agregar.class.getName()).log(Level.SEVERE, null, ex);
          }
      

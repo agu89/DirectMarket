@@ -5,7 +5,7 @@
  */
 
 package Logica;
-import Conexionbd.agregar;
+
 
 /**
  *

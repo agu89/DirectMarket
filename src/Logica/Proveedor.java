@@ -81,3 +81,4 @@ public class Proveedor extends Usuario{
    this.nombre = nombre;
    this.nombreCompañia = nc;
    }
+}
