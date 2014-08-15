@@ -6,28 +6,36 @@
 
 package Logica;
 
+import java.util.*;
+
 /**
  *
  * @author Usuario
  */
 public class ControladorProductoyEspecificaciones {
-    public ListaProductos ListaProductos;
-    public ListaHojas ListaHojas;
-    public ListaCompuesta ListaCompuesta;
-
+  
+    public List ListaProductos;
+    public List ListaHoja;
+    public List ListaCompuesta;
+    
+    public void ControladorProductoyEspecificaciones(){
+        
+    List<producto> ListaProductos = new LinkedList<producto>();
+    List<hoja> ListaHoja = new LinkedList<hoja>();
+    List<compuesta> ListaCompuesta = new LinkedList<compuesta> ();
+    
+    }
+  
+    
+    
     
     public void RegistrarProducto(String Nombre, int NumRef, String Descripcion, ListaEspecificaciones ListaEsp, Money precio, String Imagen){
          producto p = new producto();
-    }
+         p.setDatosProd(Nombre, NumRef, Descripcion, ListaEsp, precio, Imagen);
+         ListaProductos.add(p);
            /* CargarImagen(jpg)
             AltaEspecificaciones(ListaString)
             IngresarPadre(string)
             ListarEspecificaciones()*/
-    public void ListarEspecificaciones(int ref){
             
-        
-        
-    
-    
-    };    
 }
