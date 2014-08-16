@@ -14,7 +14,7 @@ class producto {
     private String Nombre;
     private int NumRef;
     private String Descripcion;
-   // private ListaEspecificaciones ListaEsp;
+    private Especificacion Esp;
     //private Money Precio;
     private String Imagen;
     
@@ -22,15 +22,17 @@ class producto {
         Nombre= null;
         Descripcion = null;
         Imagen = null;
-       //      ListaEspecificaciones ListaEsp = null;
+        Esp = null;
       //  Money precio = null; 
        
     }
-    public void setDatosProd(String Nombre, int NumRef, String Descripcion,/* ListaEspecificaciones ListaEsp , Money precio, */String Imagen){
+    public void setDatosProd(String Nombre, int NumRef, String Descripcion, List<String> Especif , Money precio, */String Imagen){
         this.Nombre = Nombre;
         this.NumRef = NumRef;
         this.Descripcion = Descripcion;
-       // this.ListaEsp = ListaEsp;
+        Especificacion e = new Especificacion();
+        e.setLista(Especif);
+        this.Esp = e;
       //  this.Precio = Precio;
         
     }
@@ -39,7 +41,7 @@ class producto {
         this.Nombre= nom;
         this.NumRef= numRef;
         this.Descripcion= desc;
-    //    this.ListaEsp =listEsp;
+    //    this. =listEsp;
      //   this.Precio = prec;
         this.Imagen =imag;
       
