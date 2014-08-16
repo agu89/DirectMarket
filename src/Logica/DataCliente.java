@@ -16,7 +16,7 @@ class DataCliente {
     private String nombre;
     private String apellido;
     private String email;
- // private date fnac;
+    private String fnac;
     private String imagen;
     
     
