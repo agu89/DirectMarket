@@ -15,7 +15,7 @@ class DataProveedor {
     
     
     
-   public void setDatos(String nick,String nombre, String apellido, String email,/* fnac*/String linkPagina,String nombreCompañia,String imagen){
+   public void setDatos(String nick,String nombre, String apellido, String email,String fnac, String linkPagina,String nombreCompañia,String imagen){
    
    }
     

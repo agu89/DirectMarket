@@ -28,10 +28,10 @@ public class ControladorUsuario {
     }
   
    
-    public void RegistrarCliente(String nick, String nombre, String apellido, String email, /*date fnac,*/ String Imagen){
+    public void RegistrarCliente(String nick, String nombre, String apellido, String email, Date fnac, String Imagen){
     
         cliente c = new cliente();
-        c.setDatos(nick, nombre, apellido, email, Imagen);
+        c.setDatos(nick, nombre, apellido, email, fnac, Imagen);
         ListaClientes.add(c);
         agregar ag = new agregar();
         ag.agregarcliente(c);
@@ -41,10 +41,10 @@ public class ControladorUsuario {
     public void SetTipoUsuario(String t){
     }
     
-    public void RegistrarProveedor(String nick, String nombre, String apellido, String email, /*date fnac,*/ String Imagen, String nombreComp, String linkPag){
+    public void RegistrarProveedor(String nick, String nombre, String apellido, String email, Date fnac, String Imagen, String nombreComp, String linkPag){
     
     Proveedor p = new Proveedor();
-    p.setdatos(nick, nombre, apellido, email, Imagen, nombreComp,linkPag);
+    p.setdatos(nick, nombre, apellido, email,fnac, Imagen, nombreComp,linkPag);
     ListaProveedores.add(p);
     agregar ag = new agregar();
     ag.agregarproveedor(p);
@@ -137,13 +137,12 @@ public class ControladorUsuario {
                     dp = p.getData();
                     return dp;
                 }
-            
-            }
-            
+            } 
        }
-    
     return null;
     }
+    
+    
     public List<OrdenCompra> ObtenerOrdenesdeCompra(){
     
     
