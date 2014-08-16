@@ -6,8 +6,7 @@
 
 package Logica;
 
-import Conexionbd.agregar;
-import Conexionbd.getLista;
+import Conexionbd.*;
 import java.util.*;
 
 /**
@@ -17,26 +16,31 @@ import java.util.*;
 public class ControladorProductoyEspecificaciones {
   
     public List ListaProductos;
-    public List ListaHoja;
-    public List ListaCompuesta;
+    public List ListaEspecificaciones;
     
     public void ControladorProductoyEspecificaciones(){
         
-    List<producto> ListaProductos = new LinkedList<producto>();
-    List<Hoja> ListaHoja = new LinkedList<hoja>();
-    List<compuesta> ListaCompuesta = new LinkedList<compuesta> ();
+    List<producto> ListaProductos = new LinkedList();
+    List<Especificacion> ListaEspecificaciones = new LinkedList();
     
     }
   
     
     
     
-    public void RegistrarProducto(String Nombre, int NumRef, String Descripcion, ListaEspecificaciones ListaEsp, Money precio, String Imagen){
+    public void RegistrarProducto(String Nombre, int NumRef, String Descripcion, List<String> Especif, Money precio, String Imagen){
          producto p = new producto();
-         p.setDatosProd(Nombre, NumRef, Descripcion, ListaEsp, precio, Imagen);
+         Especificacion Esp = new Especificacion();
+         Esp.setLista(Especif);
+         p.setDatosProd(Nombre, NumRef, Descripcion, Esp, precio, Imagen);
          ListaProductos.add(p);
           agregar ag = new agregar();
           ag.agregarproducto(p);
+          ag = new agregar();
+          ag.agregarEsp(Esp);
+       
+       
+   }
           
            /* CargarImagen(jpg)*/
           
@@ -79,31 +83,8 @@ public class ControladorProductoyEspecificaciones {
         }
         return null;
     }
-          public List<DataHoja> ListarHojas(){
-        
-    getLista gl = new getLista();
-    ListaHoja = gl.getListaHoja();
-    List<DataHoja> DataListaHoja = new LinkedList();
-        Iterator it = ListaProducto.iterator();
-        while(it.hasNext()){
-            if ( it instanceof Hoja){
-                Hoja ho  = new Hoja();
-                ho = (Hoja) it;
-                DataHoja dho = new DataHoja();
-                dho = ho.getDataHoja();
-                DataListaHoja.add(ho);
-            
-            }
-            it.next();
-         }
-        return DataListaProducto;
-
-    }
-          
-            //AltaEspecificaciones(ListaString)
-        
-    }
-    
+  
+     
     
     
     
