@@ -48,6 +48,7 @@ public class ControladorUsuario {
     ListaProveedores.add(p);
     agregar ag = new agregar();
     ag.agregarproveedor(p);
+    
     }
     
     public void CargarFoto(){
@@ -124,11 +125,26 @@ public class ControladorUsuario {
         getLista gl = new getLista();
         ListaProveedores = gl.getListaProveedor();
         
-        
+       Iterator it = ListaProveedores.iterator();
+       
+       for(int i=0; i<=ListaProveedores.size();i++){
+           Proveedor p = new Proveedor();
+            if(it instanceof Proveedor){
+                
+                p = (Proveedor)it;
+                if (p.getNick() == nick){
+                    DataProveedor dp = new DataProveedor();
+                    dp = p.getData();
+                    return dp;
+                }
+            
+            }
+            
+       }
     
-    
+    return null;
     }
-    public List ObtenerOrdenesdeCompra(){
+    public List<OrdenCompra> ObtenerOrdenesdeCompra(){
     
     
     }
