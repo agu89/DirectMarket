@@ -81,4 +81,34 @@ public class Proveedor extends Usuario{
    this.nombre = nombre;
    this.nombreCompañia = nc;
    }
+   
+   public DataProveedor getData(){
+   
+       DataProveedor dp = new DataProveedor();
+       dp.setDatos(nick, nombre, apellido, email, linkPagina, nombreCompañia, imagen);
+       return 
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
 }
+
+
+
+
+
+
+
+
+
+
+
+

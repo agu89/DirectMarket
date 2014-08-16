@@ -5,7 +5,7 @@
  */
 
 package Logica;
-
+import Conexionbd.*;
 
 /**
  *
@@ -60,8 +60,8 @@ public class cliente extends Usuario{
    }
 
    public void agregarCli(cliente cli){
-       agregar ag;
-       ag = new agregar();
+       
+       agregar ag = new agregar();
        ag.agregarcliente(cli);
        
        
