@@ -6,6 +6,7 @@
 
 package Logica;
 import Conexionbd.*;
+import java.util.*;
 
 /**
  *
@@ -22,7 +23,7 @@ public class cliente extends Usuario{
       
    }
    
-   public void setDatos(String nick, String nombre, String apellido, String email, /*date fnac,*/ String Imagen){
+   public void setDatos(String nick, String nombre, String apellido, String email, Date fnac, String Imagen){
    this.apellido = apellido;
    this.email = email;
    this.imagen = Imagen;

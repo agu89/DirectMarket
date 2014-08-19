@@ -26,13 +26,11 @@ class producto {
       //  Money precio = null; 
        
     }
-    public void setDatosProd(String Nombre, int NumRef, String Descripcion, List<String> Especif , Money precio, */String Imagen){
+    public void setDatosProd(String Nombre, int NumRef, String Descripcion, Especificacion Especif , Money precio, String Imagen){
         this.Nombre = Nombre;
         this.NumRef = NumRef;
         this.Descripcion = Descripcion;
-        Especificacion e = new Especificacion();
-        e.setLista(Especif);
-        this.Esp = e;
+        this.Esp = Especif;
       //  this.Precio = Precio;
         
     }
@@ -41,7 +39,7 @@ class producto {
         this.Nombre= nom;
         this.NumRef= numRef;
         this.Descripcion= desc;
-    //    this. =listEsp;
+        this. = Esp;
      //   this.Precio = prec;
         this.Imagen =imag;
       
@@ -57,10 +55,10 @@ class producto {
     public String getDescripcion(){
        return Descripcion;
           }
-    /*public ListaEspecificaciones getListEsp(){
-        return ListaEsp;
+    public Especificacion getEsp(){
+        return Esp;
     }
-    public Money getPrecio(){
+  /*  public Money getPrecio(){
        return Precio;
           }*/
     public String getImagen(){
@@ -75,8 +73,8 @@ class producto {
     public void setDescripcion(String desc){
        this.Descripcion = desc;
             }
-    public void setListaEsp(ListaEspecificaciones lisEsp){
-       this.ListaEsp= lisEsp;
+    public void setEsp(Especificacion Esp){
+       this.Esp= Esp;
             }
     public void setPrecio(Money prec){
        this.Precio = prec;
@@ -96,7 +94,7 @@ class producto {
     public DataProducto getDataProd(){
    
    DataProducto dpr = new DataProducto();
-   dpr.setDataProd(Nombre, NumRef, Descripcion,/* ListaEsp , Money precio, */ Imagen);
+   dpr.setDataProd(Nombre, NumRef, Descripcion, Esp , precio, */Imagen);
    return dpr;
    }
 }

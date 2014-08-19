@@ -5,6 +5,7 @@
  */
 
 package Logica;
+import java.util.*;
 
 /**
  *
@@ -39,15 +40,17 @@ public class Proveedor extends Usuario{
        nick = null;
        nombre = null;
        apellido = null;
+       fnac = null;
       nombreCompañia = null;
       linkPagina = null;
    }
    
-   public Proveedor(String ni,String nom, String ap, String nc, String lp){
+   public Proveedor(String ni,String nom, String ap, Date fnac,String nc, String lp){
         
        this.nick = ni;
        this.nombre = nom;
        this.apellido = ap;
+       this.fnac = fnac;
        this.linkPagina = lp;
        this.nombreCompañia = nc;
      
@@ -71,7 +74,7 @@ public class Proveedor extends Usuario{
         this.apellido = ap;
    }
     
-   public void setdatos(String nick, String nombre, String apellido, String email, /*date fnac,*/ String Imagen, String nc, String lp){
+   public void setdatos(String nick, String nombre, String apellido, String email, Date fnac, String Imagen, String nc, String lp){
 
    this.apellido = apellido;
    this.email = email;
@@ -80,13 +83,14 @@ public class Proveedor extends Usuario{
    this.nick = nick;
    this.nombre = nombre;
    this.nombreCompañia = nc;
+   this.fnac = fnac;
    }
    
    public DataProveedor getData(){
    
        DataProveedor dp = new DataProveedor();
-       dp.setDatos(nick, nombre, apellido, email, linkPagina, nombreCompañia, imagen);
-       return 
+       dp.setDatos(nick, nombre, apellido, email,fnac.toString(), linkPagina, nombreCompañia, imagen);
+       return dp;
    }
    
    

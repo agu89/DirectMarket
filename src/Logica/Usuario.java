@@ -5,7 +5,7 @@
  */
 
 package Logica;
-
+import java.util.*;
 /**
  *
  * @author Agustin
@@ -15,7 +15,7 @@ abstract class Usuario {
      String nombre;
      String apellido;
      String email;
-  //   private date fnac;
+     Date fnac;
      String imagen;
      
      public void Usuario(){
@@ -24,7 +24,7 @@ abstract class Usuario {
      String nombre = null;
      String apellido = null;
      String email = null;
-     //date fnac = new date();
+     Date fnac = new Date();
      String imagen = null;
      
      }
