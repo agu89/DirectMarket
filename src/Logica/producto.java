@@ -26,11 +26,11 @@ class producto {
       //  Money precio = null; 
        
     }
-    public void setDatosProd(String Nombre, int NumRef, String Descripcion, Especificacion Especif , Money precio, */String Imagen){
+    public void setDatosProd(String Nombre, int NumRef, String Descripcion, Especificacion Especif , Money precio, String Imagen){
         this.Nombre = Nombre;
         this.NumRef = NumRef;
         this.Descripcion = Descripcion;
-        this.Esp = e;
+        this.Esp = Especif;
       //  this.Precio = Precio;
         
     }

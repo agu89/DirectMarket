@@ -11,9 +11,16 @@ package Logica;
  * @author Usuario
  */
 class DataProducto {
+    
+   // private String fgasdfasdfasdf;
+    //private String nombre;
+    
+    public void DataProducto(){
+        //HACER
+    }
 
     void setDataProd(String Nombre, int NumRef, String Descripcion, String Imagen) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       //HACER
     }
     
 }

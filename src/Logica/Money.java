@@ -8,8 +8,8 @@ package Logica;
 
 /**
  *
- * @author Usuario
+ * @author Agustin
  */
-class ListaCompuesta {
+class Money {
     
 }
