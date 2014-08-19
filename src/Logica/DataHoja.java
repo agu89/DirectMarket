@@ -8,8 +8,22 @@ package Logica;
 
 /**
  *
- * @author Usuario
+ * @author Herobrine
  */
-class ListaCompuesta {
+public class DataHoja {
     
+    private String nombre;
+
+    
+public void DataHoja(){
+    this.nombre=null;
+
+}    
+    
+public void DataHoja(String nombre){
+    this.nombre=nombre;
+}
+
+
+
 }

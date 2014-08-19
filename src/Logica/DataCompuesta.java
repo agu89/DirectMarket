@@ -8,8 +8,20 @@ package Logica;
 
 /**
  *
- * @author Guilleeu
+ * @author Herobrine
  */
-public class ListaProveedores {
-    public Proveedor nodo;
+public class DataCompuesta {
+    
+    private String nombre;
+    
+
+public void DataCompuesta(){
+    this.nombre=null;
+}
+
+public void DataCompuesta(String nombre){
+    this.nombre=nombre;
+}
+
+
 }
