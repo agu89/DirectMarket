@@ -6,6 +6,8 @@
 
 package Logica;
 
+import Conexionbd.agregar;
+
 /**
  *
  * @author Usuario
@@ -39,8 +41,7 @@ class producto {
         this.Nombre= nom;
         this.NumRef= numRef;
         this.Descripcion= desc;
-        this. = Esp;
-     //   this.Precio = prec;
+         //   this.Precio = prec;
         this.Imagen =imag;
       
       
@@ -77,7 +78,7 @@ class producto {
        this.Esp= Esp;
             }
     public void setPrecio(Money prec){
-       this.Precio = prec;
+//       this.Precio = prec;
             }
     public void setImagen(String imag){
        this.Imagen = imag;
@@ -86,7 +87,7 @@ class producto {
       public void agregarProd(producto pro){
        agregar ag;
        ag = new agregar();
-       ag.agregarProducto(pro);
+     //  ag.agregarProducto(pro);
        
        
    }
