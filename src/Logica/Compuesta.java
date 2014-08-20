@@ -14,14 +14,14 @@ import java.util.*;
 public class Compuesta extends Categoria {
     //ArrayList <Categoria> NombreArrayList= new ArrayList <Categoria> ();
     private List Hijas;
-    private Categoria padre;
+    private Compuesta padre;
     private String nombre;
     
     
     
     
     
- public void Compuesto(){
+ public void Compuesta(){
      List<Categoria> ListaCategoria = new LinkedList<Categoria>();
      this.padre=null;
      this.nombre=null;
@@ -30,10 +30,15 @@ public class Compuesta extends Categoria {
      
      
  }
+ public Compuesta getPadre(){
+     return this.padre;
+ }
+ 
+ 
 public void SetPadre(String nombre){
     Compuesta cat = new Compuesta();
     ControladorCategoria cont = new ControladorCategoria();
-    cat= cont.BuscarCompuesta(nombre);
+    cat= cont.SeleccionarCompuesta(nombre);
     this.padre=cat;
 
 }

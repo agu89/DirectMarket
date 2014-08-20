@@ -7,6 +7,8 @@
 package Conexionbd;
 import Logica.cliente;
 import Logica.Proveedor;
+import Logica.Compuesta;
+import Logica.Hoja;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -47,4 +49,40 @@ public class agregar {
      
      
      }
+     
+     public void agregarCompuesta(Compuesta comp){
+     Conexionbd.conexion bd;
+     bd = new Conexionbd.conexion();
+     bd.conectarBase();
+         try {
+             
+             bd.sentencia.executeQuery("INSERT INTO CATEGORIA(REF, NOMBRE, PADRE)VALUES('"+1+"','"+comp.getNombre()+"','"+comp.getPadre()+"')");
+         } catch (SQLException ex) {
+             
+             Logger.getLogger(agregar.class.getName()).log(Level.SEVERE, null, ex);
+         }
+     
+         bd.desconectarBaseDeDatos();
+     
+     
+     }
+     
+     public void agregarHoja(Hoja hoj){
+     Conexionbd.conexion bd;
+     bd = new Conexionbd.conexion();
+     bd.conectarBase();
+         try {
+             
+             bd.sentencia.executeQuery("INSERT INTO HOJA(REF, NOMBRE, PADRE)VALUES('"+1+"','"+hoj.GetNombre()+"','"+0+"')");
+         } catch (SQLException ex) {
+             
+             Logger.getLogger(agregar.class.getName()).log(Level.SEVERE, null, ex);
+         }
+     
+         bd.desconectarBaseDeDatos();
+     
+     
+     }
+     
+     
 }

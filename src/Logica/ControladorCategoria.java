@@ -15,7 +15,7 @@ public class ControladorCategoria {
     private List ListaCompuesta;
     private List ListaHoja;
     
-    //List<Categoria> ListaCategoria = new LinkedList<Categoria>();
+   
     
     
     
@@ -35,6 +35,8 @@ public class ControladorCategoria {
          Hoja h = new Hoja();
          h.SetNombre(nombre);
          ListaHoja.add(h);
+         agregar ag = new agregar();
+         ag.agregarHoja(h);
             
      }
      else{
@@ -42,6 +44,9 @@ public class ControladorCategoria {
          c.SetNombre(nombre);
          if(padre!=null){
              c.SetPadre(padre);
+             agregar ag = new agregar();
+             ag.agregarCompuesta(c);
+             
          }
      }
  
@@ -91,7 +96,7 @@ public class ControladorCategoria {
     }
   
 
-public DataCompuesta SeleccionarCompuesta(String nombre){
+public Compuesta SeleccionarCompuesta(String nombre){
         
         getLista gl = new getLista();
         ListaCompuesta = gl.getListaCompuesta();
@@ -104,10 +109,9 @@ public DataCompuesta SeleccionarCompuesta(String nombre){
                 
                 c = (Compuesta)it;
                 if (c.getNombre()== nombre){
-                    DataCompuesta dc = new DataCompuesta();
-                    dc = c.getData();
-                    return dc;
+                    return c;
                 }
+            it.next();
             
             }
        }
@@ -116,7 +120,7 @@ public DataCompuesta SeleccionarCompuesta(String nombre){
     }
   
 
-public DataHoja SeleccionarHoja(String nombre){
+public Hoja SeleccionarHoja(String nombre){
         
         getLista gl = new getLista();
         ListaHoja = gl.getListaHoja();
@@ -129,9 +133,7 @@ public DataHoja SeleccionarHoja(String nombre){
                 
                 h = (Hoja)it;
                 if (h.GetNombre() == nombre){
-                    DataHoja dh = new DataHoja();
-                    dh = h.getData();
-                    return dh;
+                    return h;
                 }
             
             }
@@ -140,38 +142,9 @@ public DataHoja SeleccionarHoja(String nombre){
     return null;
     }
 
-public Compuesta BuscarCompuesta(String nombre){
-    
-        getLista gl = new getLista();
-        ListaCompuesta = gl.getListaCompuesta();
-        Iterator it = ListaCompuesta.iterator();
-
-        while (it.hasNext()){
-            if (it instanceof Compuesta){
-                Compuesta c = new Compuesta();
-                c = (Compuesta)it;
-                if (c.getNombre()== nombre)
-                    return c;
-
-            }
-            it.next();
-
-        }
-        return null;
-    }
 
 
 
 
 
-
-
-
-
-  
-  
-  
-  
-  
- 
 }
