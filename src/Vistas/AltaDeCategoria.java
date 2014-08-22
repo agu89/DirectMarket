@@ -5,20 +5,30 @@
  */
 
 package Vistas;
-
+import Logica.ControladorCategoria;
+import Logica.Compuesta;
+import Logica.Hoja;
 /**
  *
  * @author Herobrine
  */
 public class AltaDeCategoria extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form AltaDeCategoria
      */
     public AltaDeCategoria() {
         initComponents();
+        ControladorCategoria cont = new ControladorCategoria();
+        cont.AltaCategoria("Celulares",false, null);
+        cont.AltaCategoria("Protectores",false, null);
+        cont.AltaCategoria("Porongas",false, null);
+        Compuesta c = new Compuesta();
+        c.SetNombre("Pijas");
+        this.categoriasComboBox.addItem("Porongas");
+        //for (int j=0; j<3;j++)
         
-        this.categorias
+        
     }
 
     /**
@@ -30,16 +40,20 @@ public class AltaDeCategoria extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        categorias = new javax.swing.JComboBox();
+        categoriasComboBox = new javax.swing.JComboBox();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        categorias.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        categorias.addActionListener(new java.awt.event.ActionListener() {
+        categoriasComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        categoriasComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                categoriasActionPerformed(evt);
+                categoriasComboBoxActionPerformed(evt);
             }
         });
+
+        jScrollPane1.setViewportView(jTextPane1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -47,23 +61,30 @@ public class AltaDeCategoria extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addComponent(categorias, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(238, Short.MAX_VALUE))
+                .addComponent(categoriasComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(83, 83, 83)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(128, 128, 128)
-                .addComponent(categorias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(128, 128, 128)
+                        .addComponent(categoriasComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(114, 114, 114)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(152, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void categoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoriasActionPerformed
+    private void categoriasComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoriasComboBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_categoriasActionPerformed
+    }//GEN-LAST:event_categoriasComboBoxActionPerformed
 
     /**
      * @param args the command line arguments
@@ -103,6 +124,8 @@ public class AltaDeCategoria extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox categorias;
+    private javax.swing.JComboBox categoriasComboBox;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextPane jTextPane1;
     // End of variables declaration//GEN-END:variables
 }

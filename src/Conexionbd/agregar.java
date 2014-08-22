@@ -5,8 +5,8 @@
  */
 
 package Conexionbd;
-import Logica.cliente;
-import Logica.Proveedor;
+//import Logica.cliente;
+//import Logica.Proveedor;
 import Logica.Compuesta;
 import Logica.Hoja;
 import java.sql.SQLException;
@@ -17,7 +17,7 @@ import java.util.logging.Logger;
  * @author Agustin
  */
 public class agregar {
-     public void agregarcliente(cliente cli){
+     /*public void agregarcliente(cliente cli){
      Conexionbd.conexion bd;
      bd = new Conexionbd.conexion();
      bd.conectarBase();
@@ -32,7 +32,8 @@ public class agregar {
      
      
      
-     }
+     }*/
+    /*
      public void agregarproveedor(Proveedor cli){
      Conexionbd.conexion bd;
      bd = new Conexionbd.conexion();
@@ -49,7 +50,7 @@ public class agregar {
      
      
      }
-     
+     */
      public void agregarCompuesta(Compuesta comp){
      Conexionbd.conexion bd;
      bd = new Conexionbd.conexion();

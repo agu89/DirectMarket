@@ -6,8 +6,8 @@
 
 package Conexionbd;
 
-import Logica.Proveedor;
-import Logica.cliente;
+//import Logica.Proveedor;
+//import Logica.cliente;
 import java.sql.ResultSet;
 import java.util.LinkedList;
 import Logica.Hoja;
@@ -17,7 +17,7 @@ import Logica.Compuesta;
  * @author Agustin
  */
 public class getLista {
-    
+    /*
     public LinkedList<cliente> getListaCliente(){
         LinkedList<cliente> ListaCliente = new LinkedList();
         Conexionbd.conexion bd = new Conexionbd.conexion();
@@ -39,8 +39,8 @@ public class getLista {
         return ListaCliente;
     
     }
-    
-    public LinkedList<Proveedor> getListaProveedor(){
+    */
+    /*public LinkedList<Proveedor> getListaProveedor(){
         LinkedList<Proveedor> ListaProveedor = new LinkedList();
         Conexionbd.conexion bd = new Conexionbd.conexion();
         try{
@@ -61,7 +61,7 @@ public class getLista {
     
     }
     
-    
+  */  
     public LinkedList<Hoja> getListaHoja(){
         LinkedList<Hoja> ListaHoja = new LinkedList();
         Conexionbd.conexion bd = new Conexionbd.conexion();
