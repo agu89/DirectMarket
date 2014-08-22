@@ -57,20 +57,21 @@ public class ControladorUsuario {
     
     public List<DataCliente> ListarClientes(){
         
+    //getLista gl = new getLista();
     getLista gl = new getLista();
-    ListaClientes = gl.getListaCliente();
+    LinkedList<cliente> clientes = gl.getListaCliente();
     List<DataCliente> DataListaClientes = new LinkedList();
     DataCliente dc = new DataCliente();
-        Iterator it = ListaClientes.iterator();
-        while(it.hasNext()){
-            if ( it instanceof cliente){
+        //Iterator it = ListaClientes.iterator();
+        for(/*it.hasNext()*/int i=0; i<clientes.size(); i++){
+           // if ( /*it instanceof cliente*/ListaClientes.){
                 cliente cc  = new cliente();
-                cc = (cliente) it;
+                cc = clientes.get(i);
                 dc = cc.getData();
                 DataListaClientes.add(dc);
             
-            }
-            it.next();
+            //}
+            //it.next();
          }
         return DataListaClientes;
             // no se si esta devolviendo bien la lista  
@@ -118,7 +119,28 @@ public class ControladorUsuario {
       
     return dataListaProveedores;
     }
-    
+     public DataCliente getDataCliente(String nick){
+        
+        getLista gl = new getLista();
+        ListaClientes = gl.getListaCliente();
+        DataCliente dp = new DataCliente();
+       Iterator it = ListaClientes.iterator();
+       
+       for(int i=0; i<=ListaClientes.size();i++){
+           cliente c = new cliente();
+            if(it instanceof cliente){
+                
+               c = (cliente)it;
+                if (c.getNick().equals(nick)){
+                    
+                    dp = c.getData();
+                    
+                }
+            } 
+       }
+        
+       return dp;
+     }
     
     public DataProveedor SeleccionarProveedor(String nick){
         
@@ -131,7 +153,7 @@ public class ControladorUsuario {
            Proveedor p = new Proveedor();
             if(it instanceof Proveedor){
                 
-                p = (Proveedor)it;
+               p = (Proveedor)it;
                 if (p.getNick() == nick){
                     DataProveedor dp = new DataProveedor();
                     dp = p.getData();
@@ -141,16 +163,41 @@ public class ControladorUsuario {
        }
     return null;
     }
+    public List<cliente> ListarClientesObject(){
+        
+    getLista gl = new getLista();
+    ListaClientes = gl.getListaCliente();
+    List<cliente> ListaCli = new LinkedList();
     
-    
-    public List<OrdenCompra> ObtenerOrdenesdeCompra(){
-    
-    
+        Iterator it = ListaClientes.iterator();
+        while(it.hasNext()){
+            if ( it instanceof cliente){
+                cliente cc;
+                cc = (cliente) it;
+                ListaCli.add(cc);
+          /*      for(cliente c : ListaCli){
+                c.*/
+            }
+            
+            
+            it.next();
+           }
+        return ListaCli;
+            // no se si esta devolviendo bien la lista  
     }
-    public dataOrden SeleccionarOrdenCompra(OrdenCompra oc){
+   /* public List<OrdenCompra> ObtenerOrdenesdeCompra(){
+        
+    
+    
+    }*/
+   /* public dataOrden SeleccionarOrdenCompra(OrdenCompra oc){
+     
     
     
     
-    }
+    
+   /     858.04
+    
+    }*/
     
 }

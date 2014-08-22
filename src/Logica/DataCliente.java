@@ -10,7 +10,7 @@ package Logica;
  *
  * @author Guilleeu
  */
-class DataCliente {
+public class DataCliente {
     
     private String nick;
     private String nombre;
@@ -27,6 +27,14 @@ class DataCliente {
     email = null;
     //fnac = null;
     imagen = null;
+    }
+    
+    public String getNick(){
+        return nick;
+    }
+    
+    public String getEmail(){
+        return email;
     }
     public void setDatos(String nick, String nombre, String apellido, String email, /*date fnac*/ String imagen){
     
