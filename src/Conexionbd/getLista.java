@@ -23,9 +23,11 @@ public class getLista {
         Conexionbd.conexion bd = new Conexionbd.conexion();
         try{
             bd.conectarBase();
-            ResultSet rs = bd.sentencia.executeQuery("SELECT * FROM CLIENTES");
+            ResultSet rs = bd.sentencia.executeQuery("SELECT * FROM USUARIOS");
             while (rs.next()){
                 cliente cli = new cliente();
+                cli.setNick(rs.getString("NICK"));
+                cli.setEmail(rs.getString("EMAIL"));
                 ListaCliente.add(cli);
                 
             }

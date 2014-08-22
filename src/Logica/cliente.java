@@ -50,6 +50,9 @@ public class cliente extends Usuario{
    public String getApellido(){
        return apellido;
    }
+   public String getEmail(){
+       return email;
+   }
    public void setNick(String ni){
        this.nick = ni;
             }
@@ -59,7 +62,9 @@ public class cliente extends Usuario{
    public void setApellido(String ap){
         this.apellido = ap;
    }
-
+   public void setEmail(String em){
+        this.email = em;
+   }
    public void agregarCli(cliente cli){
        
        agregar ag = new agregar();
