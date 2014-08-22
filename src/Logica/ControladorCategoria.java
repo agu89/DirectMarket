@@ -44,15 +44,16 @@ public class ControladorCategoria {
          c.SetNombre(nombre);
          if(padre!=null){
              c.SetPadre(padre);
+         } 
              agregar ag = new agregar();
              ag.agregarCompuesta(c);
              
-         }
+         
      }
  
  }
  
-  public List<DataHoja> ListarHoja(){
+  public List<DataHoja> ListarHojas(){
         
     getLista gl = new getLista();
     ListaHoja = gl.getListaHoja();
@@ -74,7 +75,7 @@ public class ControladorCategoria {
     }
  
  
-  public List<DataCompuesta> ListarCompuesta(){
+  public List<DataCompuesta> ListarCompuestas(){
         
     getLista gl = new getLista();
     ListaCompuesta = gl.getListaCompuesta();
